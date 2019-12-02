@@ -1,0 +1,27 @@
+org: pys99pys
+app: blog-server
+service: blog-server
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  stage: prod
+
+plugins:
+  - serverless-offline
+  - serverless-webpack
+
+resources:
+  - ${file(resources/api-gateway-errors.yml)}
+
+functions:
+  app:
+    handler: src/server.handler
+    events:
+      - http:
+          path: '/'
+          method: ANY
+
+      - http:
+          path: /{any+}
+          method: ANY

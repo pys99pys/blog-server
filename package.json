@@ -1,0 +1,46 @@
+{
+  "name": "blog-server",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "sls offline start --port 8088",
+    "deploy": "sls deploy",
+    "prettify": "prettier --write '*.ts'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@koa/cors": "^3.0.0",
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/koa-router": "^7.0.42",
+    "@types/koa__cors": "^2.2.3",
+    "@types/node": "^12.0.8",
+    "aws-lambda": "^0.1.2",
+    "dotenv": "^8.2.0",
+    "husky": "^3.1.0",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "lint-staged": "^8.2.0",
+    "mysql": "^2.17.1",
+    "prettier": "^1.18.2",
+    "reflect-metadata": "^0.1.13",
+    "serverless": "^1.44.1",
+    "serverless-http": "^2.0.2",
+    "serverless-offline": "^5.3.3",
+    "serverless-webpack": "^5.3.1",
+    "ts-loader": "^6.0.2",
+    "typeorm": "^0.2.16",
+    "typescript": "^3.5.1",
+    "webpack": "^4.33.0"
+  }
+}
