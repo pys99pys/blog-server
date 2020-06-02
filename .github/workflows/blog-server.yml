@@ -13,5 +13,5 @@ jobs:
     steps:
       - name: Test job
         run: |
-          export DOCKER_HOST=tcp://13.209.8.104
+          export DOCKER_HOST=tcp://13.209.8.104:2376
           docker ps
