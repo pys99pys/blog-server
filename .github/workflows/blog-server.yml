@@ -13,5 +13,4 @@ jobs:
     steps:
       - name: Test job
         run: |
-          export DOCKER_HOST=tcp://13.209.8.104:2376
-          docker ps
+          ssh ${{secrets.EC2_USER}}@${{secrets.EC2_HOST}}
