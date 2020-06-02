@@ -13,4 +13,4 @@ jobs:
     steps:
       - name: Test job
         run: |
-          ssh pys99py@13.209.8.104
+          ssh ${{secrets.EC2_USER}}@${{secrets.EC2_HOST}} -tt
