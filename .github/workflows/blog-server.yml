@@ -1,0 +1,15 @@
+name: Deploy blog server
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build jobs
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test job
+        run: echo "test"
