@@ -1,0 +1,24 @@
+{
+  "name": "blog-server",
+  "version": "1.0.0",
+  "description": "pys99pys's tech blog server code repository",
+  "scripts": {
+    "dev": "NODE_ENV=dev nodemon --watch 'src/**/*' -e ts --exec 'ts-node' ./src/"
+  },
+  "author": "pys99pys@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "@types/koa": "^2.11.0",
+    "@types/koa-cors": "^0.0.0",
+    "@types/koa-router": "^7.0.42",
+    "dotenv": "^8.2.0",
+    "koa": "^2.11.0",
+    "koa-cors": "^0.0.16",
+    "koa-router": "^7.4.0",
+    "mysql": "^2.17.1",
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.5.4",
+    "typeorm": "^0.2.22",
+    "typescript": "^3.7.4"
+  }
+}
