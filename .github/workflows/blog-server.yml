@@ -12,4 +12,6 @@ jobs:
 
     steps:
       - name: Test job
-        run: echo "test"
+        run: |
+          export DOCKER_HOST=13.209.8.104
+          docker ps
